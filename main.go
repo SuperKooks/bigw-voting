@@ -28,6 +28,7 @@ var localStatus string
 var externalIP string
 
 func main() {
+	util.StartLogging()
 	parseCommandline()
 	votepack = NewVotepackFromFile(flagVotepackFilename)
 	if flagTrusteeExport {
